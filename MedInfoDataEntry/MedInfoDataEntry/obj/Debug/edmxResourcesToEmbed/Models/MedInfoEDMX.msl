@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedInfoDBModelStoreContainer" CdmEntityContainer="MedInfoDBEntities">
+    <EntitySetMapping Name="MedInfoes">
+      <EntityTypeMapping TypeName="MedInfoDBModel.MedInfo">
+        <MappingFragment StoreEntitySet="MedInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category1" ColumnName="category1" />
+          <ScalarProperty Name="category2" ColumnName="category2" />
+          <ScalarProperty Name="category3" ColumnName="category3" />
+          <ScalarProperty Name="category4" ColumnName="category4" />
+          <ScalarProperty Name="category5" ColumnName="category5" />
+          <ScalarProperty Name="MedInfo1" ColumnName="MedInfo" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="HitCounter" ColumnName="HitCounter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

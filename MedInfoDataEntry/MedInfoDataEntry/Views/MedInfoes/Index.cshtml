@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MedInfoDataEntry.Models.MedInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "MedInfoes", FormMethod.Get))
+{
+    <p>
+        Find by id: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedInfo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Approved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HitCounter)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category5)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.MedInfo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Approved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HitCounter)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+    }
+
+</table>

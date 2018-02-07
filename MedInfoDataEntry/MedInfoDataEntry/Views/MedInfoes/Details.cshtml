@@ -1,0 +1,90 @@
+﻿@model MedInfoDataEntry.Models.MedInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MedInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedInfo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayTextFor(model => model.MedInfo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Approved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Approved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HitCounter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HitCounter)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
